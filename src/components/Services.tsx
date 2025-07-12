@@ -1,4 +1,4 @@
-import { FileText, Calculator, Receipt, Shield, CheckCircle, CreditCard } from "lucide-react";
+import { FileText, Calculator, Receipt, Shield, CheckCircle, CreditCard, Truck } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -30,6 +30,11 @@ const Services = () => {
       icon: Shield,
       titleKey: "services.audit.title",
       descKey: "services.audit.desc"
+    },
+    {
+      icon: Truck,
+      titleKey: "services.importexport.title",
+      descKey: "services.importexport.desc"
     },
     {
       icon: CheckCircle,

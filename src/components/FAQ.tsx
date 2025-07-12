@@ -23,8 +23,8 @@ const faqs = [
     answer: "For STRN registration, you'll need: valid NTN, CNIC/passport copies, business registration documents, bank account details, and proof of business address. We'll provide a complete checklist based on your specific business type."
   },
   {
-    question: "Can you help with FBR audit notices?",
-    answer: "Yes, we provide complete support for FBR audits and notices. This includes document preparation, representation during audit proceedings, and ensuring all responses are submitted within required timeframes to avoid penalties."
+    question: "Do you provide accounting and bookkeeping services?",
+    answer: "Yes, we offer comprehensive accounting services including bookkeeping, financial statement preparation, expense tracking, and business financial management. Our accounting services help ensure your records are accurate and compliant with regulatory requirements."
   },
   {
     question: "What are your service charges?",

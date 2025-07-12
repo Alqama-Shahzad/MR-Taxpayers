@@ -25,14 +25,14 @@ const Footer = () => {
             </p>
             <div className="flex items-center space-x-4">
               <a 
-                href="tel:+923001234567"
+                href="tel:+923004881134"
                 className="flex items-center space-x-2 text-secondary-foreground hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>+92 300 1234567</span>
+                <span>+92 300 4881134</span>
               </a>
               <a 
-                href="mailto:rafay@taxservices.pk"
+                href="mailto:mrtaxpayers12@gmail.com"
                 className="flex items-center space-x-2 text-secondary-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
@@ -155,7 +155,7 @@ const Footer = () => {
             <div className="flex items-center space-x-6">
               <span className="text-secondary-foreground/60 text-sm">Get in touch:</span>
               <a 
-                href="https://wa.me/923001234567" 
+                href="https://wa.me/923004881134" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"

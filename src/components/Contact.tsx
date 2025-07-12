@@ -154,7 +154,8 @@ const Contact = () => {
                           <SelectItem value="strn">STRN & Sales Tax</SelectItem>
                           <SelectItem value="income-tax">Income Tax Returns</SelectItem>
                           <SelectItem value="e-invoicing">E-Invoicing</SelectItem>
-                          <SelectItem value="audit-support">FBR Audit Support</SelectItem>
+                          <SelectItem value="audit-support">Accounting Service</SelectItem>
+                          <SelectItem value="import-export">Import Export</SelectItem>
                           <SelectItem value="verification">Document Verification</SelectItem>
                           <SelectItem value="other">Other/General Inquiry</SelectItem>
                         </SelectContent>
@@ -224,7 +225,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-medium text-foreground">Email</div>
-                    <div className="text-muted-foreground">MRtaxpayers12@gmail.com</div>
+                    <div className="text-muted-foreground">mrtaxpayers12@gmail.com</div>
                   </div>
                 </div>
 
@@ -234,7 +235,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-medium text-foreground">Location</div>
-                    <div className="text-muted-foreground">Tando Allahyar, Pakistan</div>
+                    <div className="text-muted-foreground">All Over Pakistan</div>
                   </div>
                 </div>
 
@@ -263,7 +264,7 @@ const Contact = () => {
                   </p>
                   <Button 
                     className="w-full bg-green-600 hover:bg-green-700 text-white"
-                    onClick={() => window.open('https://wa.me/03004881134', '_blank')}
+                    onClick={() => window.open('https://wa.me/923004881134', '_blank')}
                   >
                     Chat on WhatsApp
                   </Button>
