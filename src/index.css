@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MR Taxpayers - Premium Design System
+Ultra-modern corporate aesthetic with deep green (#1a5f2f) and navy blue (#1b2a49)
+All colors MUST be HSL for perfect theming.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 25% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 25% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 25% 8%;
+
+    /* Premium deep green primary */
+    --primary: 140 65% 18%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Sophisticated navy blue secondary */
+    --secondary: 218 50% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 20% 40%;
+
+    /* Elegant light green accent */
+    --accent: 140 40% 96%;
+    --accent-foreground: 140 65% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 35% 88%;
+    --input: 214 35% 88%;
+    --ring: 140 65% 18%;
+
+    /* Premium design tokens */
+    --primary-light: 140 55% 28%;
+    --primary-glow: 140 45% 55%;
+    --primary-dark: 140 70% 12%;
+    --secondary-light: 218 45% 25%;
+    --secondary-dark: 218 55% 10%;
+    
+    /* Premium gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--primary-dark)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-pricing: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--background)) 100%);
+    
+    /* Premium shadows & effects */
+    --shadow-soft: 0 2px 8px hsl(var(--primary) / 0.08);
+    --shadow-card: 0 8px 32px hsl(var(--primary) / 0.12);
+    --shadow-pricing: 0 20px 64px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 48px hsl(var(--primary-glow) / 0.25);
+    --shadow-premium: 0 25px 80px hsl(var(--secondary) / 0.20);
+    
+    /* Smooth premium animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body[data-lang="ur"] {
+    font-family: 'Noto Nastaliq Urdu', 'Roboto', sans-serif;
+    direction: rtl;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+  
+  body[data-lang="ur"] h1,
+  body[data-lang="ur"] h2, 
+  body[data-lang="ur"] h3,
+  body[data-lang="ur"] h4,
+  body[data-lang="ur"] h5,
+  body[data-lang="ur"] h6 {
+    font-family: 'Noto Nastaliq Urdu', 'Poppins', sans-serif;
+  }
+  
+  .font-display {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body[data-lang="ur"] .font-display {
+    font-family: 'Noto Nastaliq Urdu', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card-premium {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid hsl(var(--border));
+    transition: var(--transition-spring);
+  }
+  
+  .card-hover {
+    transition: var(--transition-smooth);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-premium);
+  }
+  
+  /* Mobile-optimized card hover */
+  @media (max-width: 768px) {
+    .card-hover:hover {
+      transform: translateY(-4px) scale(1.01);
+    }
+  }
+  
+  .pricing-card {
+    background: var(--gradient-card);
+    border: 2px solid hsl(var(--border));
+    transition: var(--transition-spring);
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: var(--shadow-pricing);
+    border-color: hsl(var(--primary));
+  }
+  
+  /* Mobile-optimized pricing card hover */
+  @media (max-width: 768px) {
+    .pricing-card:hover {
+      transform: translateY(-6px) scale(1.02);
+    }
+  }
+  
+  .pricing-card.featured {
+    background: var(--gradient-pricing);
+    border-color: hsl(var(--primary));
+    box-shadow: var(--shadow-pricing);
+  }
+  
+  .pricing-card.featured:hover {
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(20px);
+    background: hsl(var(--background) / 0.85);
+    border: 1px solid hsl(var(--border) / 0.3);
+  }
+  
+  /* Mobile glass effect optimization */
+  @media (max-width: 768px) {
+    .glass-effect {
+      backdrop-filter: blur(10px);
+      background: hsl(var(--background) / 0.95);
+    }
+  }
+  
+  .premium-button {
+    background: var(--gradient-primary);
+    transition: var(--transition-spring);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .premium-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Mobile button optimization */
+  @media (max-width: 768px) {
+    .premium-button:hover {
+      transform: translateY(-1px);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  
+  .fade-in-scale {
+    animation: fadeInScale 0.8s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  /* Mobile fade animations */
+  @media (max-width: 768px) {
+    .fade-in-up {
+      animation-duration: 0.6s;
+      transform: translateY(20px);
+    }
+    
+    .fade-in-scale {
+      animation-duration: 0.6s;
+    }
+  }
+  
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+  .stagger-7 { animation-delay: 0.7s; }
+  .stagger-8 { animation-delay: 0.8s; }
+  
+  /* Mobile stagger optimization */
+  @media (max-width: 768px) {
+    .stagger-1 { animation-delay: 0.05s; }
+    .stagger-2 { animation-delay: 0.1s; }
+    .stagger-3 { animation-delay: 0.15s; }
+    .stagger-4 { animation-delay: 0.2s; }
+    .stagger-5 { animation-delay: 0.25s; }
+    .stagger-6 { animation-delay: 0.3s; }
+    .stagger-7 { animation-delay: 0.35s; }
+    .stagger-8 { animation-delay: 0.4s; }
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
