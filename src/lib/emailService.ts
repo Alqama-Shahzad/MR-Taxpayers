@@ -20,11 +20,25 @@ export const sendEmailViaEmailJS = async (formData: ContactFormData): Promise<bo
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
+      user_email: formData.email, // Alternative parameter name
       phone: formData.phone,
+      user_phone: formData.phone, // Alternative parameter name
       service: formData.service,
       message: formData.message,
       to_email: EMAIL_CONFIG.TARGET_EMAIL,
+      // Additional formatted message with all details
+      full_message: `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone || 'Not provided'}
+Service Interest: ${formData.service || 'Not specified'}
+
+Message:
+${formData.message}
+      `.trim(),
     };
+
+    console.log('Sending email with template params:', templateParams);
 
     const response = await emailjs.send(
       EMAIL_CONFIG.EMAILJS.SERVICE_ID,
@@ -33,6 +47,7 @@ export const sendEmailViaEmailJS = async (formData: ContactFormData): Promise<bo
       EMAIL_CONFIG.EMAILJS.PUBLIC_KEY
     );
 
+    console.log('EmailJS response:', response);
     return response.status === 200;
   } catch (error) {
     console.error('EmailJS Error:', error);
@@ -90,16 +105,21 @@ export const sendEmailViaNetlify = async (formData: ContactFormData): Promise<bo
 
 // Alternative: Simple mailto link (opens user's email client)
 export const sendEmailViaMailto = (formData: ContactFormData): void => {
-  const subject = encodeURIComponent(`Contact Form: ${formData.service || 'General Inquiry'}`);
+  const subject = encodeURIComponent(`Contact Form Submission: ${formData.service || 'General Inquiry'}`);
   const body = encodeURIComponent(`
+Contact Form Submission Details:
+
 Name: ${formData.name}
 Email: ${formData.email}
-Phone: ${formData.phone}
-Service: ${formData.service}
+Phone: ${formData.phone || 'Not provided'}
+Service Interest: ${formData.service || 'Not specified'}
 
 Message:
 ${formData.message}
-  `);
+
+---
+This message was sent from the Rafay Tax Solutions contact form.
+  `.trim());
   
   const mailtoLink = `mailto:${EMAIL_CONFIG.TARGET_EMAIL}?subject=${subject}&body=${body}`;
   window.location.href = mailtoLink;
