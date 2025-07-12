@@ -26,6 +26,18 @@ export const sendEmailViaEmailJS = async (formData: ContactFormData): Promise<bo
       service: formData.service,
       message: formData.message,
       to_email: EMAIL_CONFIG.TARGET_EMAIL,
+      // Current date and time
+      current_date: new Date().toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }),
+      current_time: new Date().toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: true
+      }),
       // Additional formatted message with all details
       full_message: `
 Name: ${formData.name}
